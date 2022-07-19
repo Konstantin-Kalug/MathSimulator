@@ -1,0 +1,62 @@
+﻿<Window x:Class="MathSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MathSimulator"
+        mc:Ignorable="d"
+        Title="MathSimulator" Height="450" Width="800" MinHeight="450" MinWidth="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid x:Name="menuGrid" Background="LightGray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*">
+                </RowDefinition>
+                <RowDefinition Height="10*">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*">
+                </ColumnDefinition>
+                <ColumnDefinition Width="5*">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="MathSimulator" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
+            <Label Content="Выберите режим" Grid.Row="0" Grid.Column="1" FontSize="25" VerticalAlignment="Bottom" FontFamily="Arial"/>
+            <Image Stretch="Fill" Source="/menu.png" Grid.Row="1" Margin="30" />
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
+                <Button x:Name="buttonMenuChart" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 35 1" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Stretch="Fill" Source="/chart_icon.png" />
+                        <TextBlock VerticalAlignment="Center" FontSize="16">Графики</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="buttonMenuGraph" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 50 1">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Stretch="Fill" Source="/graph_icon.png" />
+                        <TextBlock VerticalAlignment="Center" FontSize="16">Графы</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="buttonMenuStatistics" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 15 1">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Stretch="Fill" Source="/statistics_icon.png" />
+                        <TextBlock VerticalAlignment="Center" FontSize="16">Статистика</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="buttonMenuInfo" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 35 1">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Stretch="Fill" Source="/book_icon.png" />
+                        <TextBlock VerticalAlignment="Center" FontSize="16">Справка</TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <Button x:Name="settingsButton" Grid.Row="1" Grid.Column="1" Background="DarkGray" Width="25" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5">
+                <Image Stretch="Fill" Source="/settings_icon.png"/>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
