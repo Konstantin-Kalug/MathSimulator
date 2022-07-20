@@ -55,6 +55,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="StatisticsWindow.xaml.cs">
+      <DependentUpon>StatisticsWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChartsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GraphsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,10 +78,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ChartsWindow.xaml.cs">
+      <DependentUpon>ChartsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GraphsWindow.xaml.cs">
+      <DependentUpon>GraphsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindow.xaml.cs">
+      <DependentUpon>InfoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="StatisticsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -95,22 +123,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="chart_icon.png" />
+    <Resource Include="data\static\img\menu\chart_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="graph_icon.png" />
+    <Resource Include="data\static\img\menu\graph_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="statistics_icon.png" />
+    <Resource Include="data\static\img\menu\statistics_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="book_icon.png" />
+    <Resource Include="data\static\img\menu\book_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="settings_icon.png" />
+    <Resource Include="data\static\img\menu\settings_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="menu.png" />
+    <Resource Include="data\static\img\menu\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\static\img\window_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\static\text\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

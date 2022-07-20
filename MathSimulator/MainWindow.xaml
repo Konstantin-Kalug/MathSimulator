@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MathSimulator"
         mc:Ignorable="d"
-        Title="MathSimulator" Height="450" Width="800" MinHeight="450" MinWidth="800" ResizeMode="NoResize">
+        Title="MathSimulator" Height="450" Width="800" MinHeight="450" MinWidth="800" ResizeMode="NoResize"
+        Icon="/data/static/img/window_icon.ico">
     <Grid>
         <Grid x:Name="menuGrid" Background="LightGray">
             <Grid.RowDefinitions>
@@ -21,42 +22,45 @@
                 </ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Label Content="MathSimulator" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
-            <Label Content="Выберите режим" Grid.Row="0" Grid.Column="1" FontSize="25" VerticalAlignment="Bottom" FontFamily="Arial"/>
-            <Image Stretch="Fill" Source="/menu.png" Grid.Row="1" Margin="30" />
+            <Label Content="Начало работы" Grid.Row="0" Grid.Column="1" FontSize="25" VerticalAlignment="Bottom" FontFamily="Arial"/>
+            <Image Stretch="Fill" Source="/data/static/img/menu/menu.png" Grid.Row="1" Margin="30" />
             <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
-                <Button x:Name="buttonMenuChart" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 35 1" >
+                <Button x:Name="buttonMenuChart" Click="buttonMenuChart_Click" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 35 1" >
                     <StackPanel Orientation="Horizontal">
-                        <Image Stretch="Fill" Source="/chart_icon.png" />
+                        <Image Stretch="Fill" Source="/data/static/img/menu/chart_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Графики</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button x:Name="buttonMenuGraph" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 50 1">
+                <Button x:Name="buttonMenuGraph" Click="buttonMenuGraph_Click" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 50 1">
                     <StackPanel Orientation="Horizontal">
-                        <Image Stretch="Fill" Source="/graph_icon.png" />
+                        <Image Stretch="Fill" Source="/data/static/img/menu/graph_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Графы</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button x:Name="buttonMenuStatistics" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 15 1">
+                <Button x:Name="buttonMenuStatistics" Click="buttonMenuStatistics_Click" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 15 1">
                     <StackPanel Orientation="Horizontal">
-                        <Image Stretch="Fill" Source="/statistics_icon.png" />
+                        <Image Stretch="Fill" Source="/data/static/img/menu/statistics_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Статистика</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button x:Name="buttonMenuInfo" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 35 1">
+                <Button x:Name="buttonMenuInfo" Click="buttonMenuInfo_Click" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 35 1">
                     <StackPanel Orientation="Horizontal">
-                        <Image Stretch="Fill" Source="/book_icon.png" />
+                        <Image Stretch="Fill" Source="/data/static/img/menu/book_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Справка</TextBlock>
                     </StackPanel>
                 </Button>
             </StackPanel>
-            <Button x:Name="settingsButton" Grid.Row="1" Grid.Column="1" Background="DarkGray" Width="25" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5">
-                <Image Stretch="Fill" Source="/settings_icon.png"/>
+            <Button x:Name="settingsButton" Click="settingsButton_Click" Grid.Row="1" Grid.Column="1" Background="DarkGray" Width="25" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5">
+                <Image Stretch="Fill" Source="/data/static/img/menu/settings_icon.png"/>
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
+        </Grid>
+        <Grid x:Name="settingsGrid" Background="LightGray" Visibility="Collapsed">
+            <Label Content="Настройки" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
         </Grid>
     </Grid>
 </Window>
