@@ -20,9 +20,11 @@ namespace MathSimulator
     /// </summary>
     public partial class MainWindow : Window
     {
+        Window[] windows = new Window[5];
         public MainWindow()
         {
             InitializeComponent();
+            windows[0] = new ChartsWindow(this); windows[1] = new GraphsWindow(this); windows[2] = new StatisticsWindow(this); windows[3] = new RandomWindow(this); windows[4] = new InfoWindow(this);
         }
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
@@ -34,13 +36,13 @@ namespace MathSimulator
 
         private void buttonMenu_Click(object sender, RoutedEventArgs e)
         {
-            Window newWindow;
-            if (sender == buttonMenuChart) { newWindow = new ChartsWindow(); }
-            else if (sender == buttonMenuGraph) { newWindow = new GraphsWindow(); }
-            else if (sender == buttonMenuStatistics) { newWindow = new StatisticsWindow(); }
-            else if (sender == buttonMenuRandom) { newWindow = new RandomWindow(); }
-            else { newWindow = new InfoWindow(); }
-            openNewWindow(newWindow);
+            int key;
+            if (sender == buttonMenuChart) { key = 0; }
+            else if (sender == buttonMenuGraph) { key = 1; }
+            else if (sender == buttonMenuStatistics) { key = 2; }
+            else if (sender == buttonMenuRandom) { key = 3; }
+            else { key = 4; }
+            openNewWindow(windows[key]);
         }
         private void openNewWindow(Window window)
         {

@@ -9,7 +9,11 @@
         Icon="/data/static/img/window_icon.ico"
         WindowState="Maximized">
     <Grid>
-        <Grid x:Name="randomGrid" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="223*"/>
+            <ColumnDefinition Width="177*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="randomGrid" Background="LightGray" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40">
                 </RowDefinition>

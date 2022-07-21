@@ -19,9 +19,12 @@ namespace MathSimulator
     /// </summary>
     public partial class RandomWindow : Window
     {
-        public RandomWindow()
+        Window mainWindow;
+        public RandomWindow(Window window)
         {
             InitializeComponent();
+            mainWindow = window;
         }
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e) { mainWindow.Show(); this.Hide(); }
     }
 }

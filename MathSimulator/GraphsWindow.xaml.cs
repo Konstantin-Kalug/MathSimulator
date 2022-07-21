@@ -19,9 +19,12 @@ namespace MathSimulator
     /// </summary>
     public partial class GraphsWindow : Window
     {
-        public GraphsWindow()
+        Window mainWindow;
+        public GraphsWindow(Window window)
         {
             InitializeComponent();
+            mainWindow = window;
         }
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e) { mainWindow.Show(); this.Hide(); }
     }
 }
