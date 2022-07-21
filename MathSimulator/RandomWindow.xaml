@@ -9,7 +9,15 @@
         Icon="/data/static/img/window_icon.ico"
         WindowState="Maximized">
     <Grid>
-        <Grid x:Name="randomGrid">
+        <Grid x:Name="randomGrid" Background="LightGray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40">
+                </RowDefinition>
+                <RowDefinition>
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Canvas Grid.Row="1" Background="WhiteSmoke">
+            </Canvas>
         </Grid>
     </Grid>
 </Window>

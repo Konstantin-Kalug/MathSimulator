@@ -32,35 +32,20 @@ namespace MathSimulator
 
         }
 
-        private void buttonMenuChart_Click(object sender, RoutedEventArgs e)
+        private void buttonMenu_Click(object sender, RoutedEventArgs e)
         {
-            ChartsWindow chartsWindow = new ChartsWindow();
-            chartsWindow.Show();
+            Window newWindow;
+            if (sender == buttonMenuChart) { newWindow = new ChartsWindow(); }
+            else if (sender == buttonMenuGraph) { newWindow = new GraphsWindow(); }
+            else if (sender == buttonMenuStatistics) { newWindow = new StatisticsWindow(); }
+            else if (sender == buttonMenuRandom) { newWindow = new RandomWindow(); }
+            else { newWindow = new InfoWindow(); }
+            openNewWindow(newWindow);
         }
-
-        private void buttonMenuGraph_Click(object sender, RoutedEventArgs e)
+        private void openNewWindow(Window window)
         {
-            GraphsWindow graphsWindow = new GraphsWindow();
-            graphsWindow.Show();
-        }
-
-        private void buttonMenuStatistics_Click(object sender, RoutedEventArgs e)
-        {
-            StatisticsWindow statisticsWindow = new StatisticsWindow();
-            statisticsWindow.Show();
-        }
-
-        private void buttonMenuInfo_Click(object sender, RoutedEventArgs e)
-        {
-            InfoWindow infoWindow = new InfoWindow();
-            infoWindow.Show();
-        }
-
-        private void buttonMenuRandom_Click(object sender, RoutedEventArgs e)
-        {
-            RandomWindow randomWindow = new RandomWindow();
-            randomWindow.Show();
-
+            window.Show();
+            this.Hide();
         }
     }
 }
