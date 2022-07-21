@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MathSimulator"
         mc:Ignorable="d"
-        Title="InfoWindow" Height="350" Width="500"
+        Title="Справка" Height="350" Width="500"
         Icon="/data/static/img/window_icon.ico">
     <Grid>
         <TabControl Background="LightGray">
