@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:MathSimulator"
         mc:Ignorable="d"
         Title="GraphsWindow" Height="450" Width="800"
+        Icon="/data/static/img/window_icon.ico"
         WindowState="Maximized">
     <Grid>
         

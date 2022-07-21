@@ -25,25 +25,31 @@
             <Label Content="Начало работы" Grid.Row="0" Grid.Column="1" FontSize="25" VerticalAlignment="Bottom" FontFamily="Arial"/>
             <Image Stretch="Fill" Source="/data/static/img/menu/menu.png" Grid.Row="1" Margin="30" />
             <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
-                <Button x:Name="buttonMenuChart" Click="buttonMenuChart_Click" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 35 1" >
+                <Button x:Name="buttonMenuChart" Click="buttonMenuChart_Click" Width="210" Height="50" Background="DarkGray" Margin="5" Padding="1 1 100 1" >
                     <StackPanel Orientation="Horizontal">
                         <Image Stretch="Fill" Source="/data/static/img/menu/chart_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Графики</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button x:Name="buttonMenuGraph" Click="buttonMenuGraph_Click" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 50 1">
+                <Button x:Name="buttonMenuGraph" Click="buttonMenuGraph_Click" Width="210" Height="50" Background="DarkGray" Margin="5" Padding="1 1 125 1">
                     <StackPanel Orientation="Horizontal">
                         <Image Stretch="Fill" Source="/data/static/img/menu/graph_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Графы</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button x:Name="buttonMenuStatistics" Click="buttonMenuStatistics_Click" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 15 1">
+                <Button x:Name="buttonMenuStatistics" Click="buttonMenuStatistics_Click" Width="210" Height="50" Background="DarkGray" Margin="5" Padding="1 1 75 1">
                     <StackPanel Orientation="Horizontal">
                         <Image Stretch="Fill" Source="/data/static/img/menu/statistics_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Статистика</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button x:Name="buttonMenuInfo" Click="buttonMenuInfo_Click" Width="150" Height="50" Background="DarkGray" Margin="5" Padding="1 1 35 1">
+                <Button x:Name="buttonMenuRandom" Click="buttonMenuRandom_Click" Width="210" Height="50" Background="DarkGray" Margin="5" Padding="1 1 1 1">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Stretch="Fill" Source="/data/static/img/menu/random_icon.png" />
+                        <TextBlock VerticalAlignment="Center" FontSize="16">Метод Монте-Карло</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="buttonMenuInfo" Click="buttonMenuInfo_Click" Width="210" Height="50" Background="DarkGray" Margin="5" Padding="1 1 85 1">
                     <StackPanel Orientation="Horizontal">
                         <Image Stretch="Fill" Source="/data/static/img/menu/book_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Справка</TextBlock>

@@ -55,5 +55,12 @@ namespace MathSimulator
             InfoWindow infoWindow = new InfoWindow();
             infoWindow.Show();
         }
+
+        private void buttonMenuRandom_Click(object sender, RoutedEventArgs e)
+        {
+            RandomWindow randomWindow = new RandomWindow();
+            randomWindow.Show();
+
+        }
     }
 }
