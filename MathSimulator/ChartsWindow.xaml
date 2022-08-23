@@ -9,6 +9,17 @@
         Icon="/data/static/img/window_icon.ico"
         WindowState="Maximized">
     <Grid>
-        
+        <ToolBar Height="25" VerticalAlignment="Top">
+            <ComboBox x:Name="actionsList" VerticalAlignment="Top">
+                <ComboBoxItem IsSelected="True">
+                    <TextBlock >Гипотеза Коллатца</TextBlock>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock>Формула Таппера</TextBlock>
+                </ComboBoxItem>
+            </ComboBox>
+        </ToolBar>
+        <Grid x:Name="CollatzGrid" >
+        </Grid>
     </Grid>
 </Window>

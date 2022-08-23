@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,9 @@ namespace MathSimulator
             InitializeComponent();
             mainWindow = window;
         }
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e) { mainWindow.Show(); this.Hide(); }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            mainWindow.Show();
+        }
     }
 }

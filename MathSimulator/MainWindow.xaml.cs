@@ -24,7 +24,6 @@ namespace MathSimulator
         public MainWindow()
         {
             InitializeComponent();
-            windows[0] = new ChartsWindow(this); windows[1] = new GraphsWindow(this); windows[2] = new StatisticsWindow(this); windows[3] = new RandomWindow(this); windows[4] = new InfoWindow(this);
         }
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
@@ -36,18 +35,14 @@ namespace MathSimulator
 
         private void buttonMenu_Click(object sender, RoutedEventArgs e)
         {
-            int key;
-            if (sender == buttonMenuChart) { key = 0; }
-            else if (sender == buttonMenuGraph) { key = 1; }
-            else if (sender == buttonMenuStatistics) { key = 2; }
-            else if (sender == buttonMenuRandom) { key = 3; }
-            else { key = 4; }
-            openNewWindow(windows[key]);
+            Window window;
+            if (sender == buttonMenuChart) { window = new ChartsWindow(this); }
+            else if (sender == buttonMenuGraph) { window = new GraphsWindow(this); }
+            else if (sender == buttonMenuStatistics) { window = new StatisticsWindow(this); }
+            else if (sender == buttonMenuRandom) { window = new RandomWindow(this); }
+            else { window = new InfoWindow(this); }
+            openNewWindow(window);
         }
-        private void openNewWindow(Window window)
-        {
-            window.Show();
-            this.Hide();
-        }
+        private void openNewWindow(Window window) { window.Show(); if (!(window is InfoWindow)) this.Hide(); }
     }
 }
