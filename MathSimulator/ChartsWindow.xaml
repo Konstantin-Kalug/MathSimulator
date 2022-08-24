@@ -9,17 +9,27 @@
         Icon="/data/static/img/window_icon.ico"
         WindowState="Maximized">
     <Grid>
-        <ToolBar Height="25" VerticalAlignment="Top">
-            <ComboBox x:Name="actionsList" VerticalAlignment="Top">
-                <ComboBoxItem IsSelected="True">
-                    <TextBlock >Гипотеза Коллатца</TextBlock>
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <TextBlock>Формула Таппера</TextBlock>
-                </ComboBoxItem>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <ToolBar Height="25" VerticalAlignment="Top" Grid.Row="0">
+            <ComboBox x:Name="actionsList" VerticalAlignment="Top" SelectionChanged="actionsList_SelectionChanged">
             </ComboBox>
         </ToolBar>
-        <Grid x:Name="CollatzGrid" >
+        <Grid x:Name="CollatzGrid" Visibility="Hidden" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition>
+                </RowDefinition>
+                <RowDefinition Height="30">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <WpfPlot x:Name="WpfPlot1" Grid.Row="0" />
+            <TextBox x:Name="numbersBox" PreviewTextInput="numbersBox_PreviewTextInput" KeyDown="numbersBox_KeyDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" MaxLength="7"  Grid.Row="1" Width="300" Margin="1 1 1 1"/>
+        </Grid>
+        <Grid x:Name="TupperGrid" Visibility="Hidden" Grid.Row="1">
         </Grid>
     </Grid>
 </Window>
