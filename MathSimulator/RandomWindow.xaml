@@ -9,19 +9,17 @@
         Icon="/data/static/img/window_icon.ico"
         WindowState="Maximized">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="223*"/>
-            <ColumnDefinition Width="177*"/>
-        </Grid.ColumnDefinitions>
-        <Grid x:Name="randomGrid" Background="LightGray" Grid.ColumnSpan="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40">
-                </RowDefinition>
-                <RowDefinition>
-                </RowDefinition>
-            </Grid.RowDefinitions>
-            <Canvas Grid.Row="1" Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25">
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <ToolBar Height="25" VerticalAlignment="Top" Grid.Row="0">
+        </ToolBar>
+        <Border Margin="5 5 5 5" BorderBrush="Black" BorderThickness="1" Grid.Row="1">
+            <Canvas>
             </Canvas>
-        </Grid>
+        </Border>
     </Grid>
 </Window>
