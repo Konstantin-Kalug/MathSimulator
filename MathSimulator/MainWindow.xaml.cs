@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,5 +45,17 @@ namespace MathSimulator
             openNewWindow(window);
         }
         private void openNewWindow(Window window) { window.Show(); if (!(window is InfoWindow)) this.Hide(); }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            menuGrid.Visibility = Visibility.Visible;
+            settingsGrid.Visibility = Visibility.Collapsed;
+        }
+
+        private void creatorlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
     }
 }

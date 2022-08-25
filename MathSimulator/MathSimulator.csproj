@@ -180,5 +180,8 @@
   <ItemGroup>
     <Resource Include="data\static\img\menu\random_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\static\img\menu\home_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

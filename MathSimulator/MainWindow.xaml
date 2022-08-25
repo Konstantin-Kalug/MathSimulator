@@ -31,7 +31,7 @@
                         <TextBlock VerticalAlignment="Center" FontSize="16">Графики</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button x:Name="buttonMenuGraph" Click="buttonMenu_Click" Width="210" Height="50" Background="DarkGray" Margin="5" Padding="1 1 125 1">
+                <Button x:Name="buttonMenuGraph" Click="buttonMenu_Click" Width="210" Height="50" Background="DarkGray" Margin="5" Padding="1 1 114 1">
                     <StackPanel Orientation="Horizontal">
                         <Image Stretch="Fill" Source="/data/static/img/menu/graph_icon.png" />
                         <TextBlock VerticalAlignment="Center" FontSize="16">Графы</TextBlock>
@@ -67,6 +67,17 @@
         </Grid>
         <Grid x:Name="settingsGrid" Background="LightGray" Visibility="Collapsed">
             <Label Content="Настройки" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
+            <Button x:Name="homeButton" Click="homeButton_Click" Background="DarkGray" Width="25" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5">
+                <Image Stretch="Fill" Source="/data/static/img/menu/home_icon.png"/>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Label VerticalAlignment="Bottom" HorizontalAlignment="Left">
+               <!-- <Hyperlink x:Name="creatorLink" NavigateUri="" RequestNavigate="creatorlink_RequestNavigate">Создатель</Hyperlink> -->
+            </Label>
         </Grid>
     </Grid>
 </Window>
