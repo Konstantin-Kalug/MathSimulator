@@ -30,5 +30,10 @@ namespace MathSimulator
         {
             mainWindow.Show();
         }
+
+        private void figures_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Cursor = Cursors.Pen;
+        }
     }
 }

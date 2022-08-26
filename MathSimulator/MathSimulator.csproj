@@ -81,6 +81,7 @@
     <Compile Include="RandomWindow.xaml.cs">
       <DependentUpon>RandomWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingsWindows.cs" />
     <Compile Include="StatisticsWindow.xaml.cs">
       <DependentUpon>StatisticsWindow.xaml</DependentUpon>
     </Compile>

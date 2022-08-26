@@ -66,7 +66,44 @@
             </Button>
         </Grid>
         <Grid x:Name="settingsGrid" Background="LightGray" Visibility="Collapsed">
-            <Label Content="Настройки" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40"/>
+            <StackPanel HorizontalAlignment="Center">
+                <Label Content="Настройки" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                <Label Content="Выберите тему:" HorizontalAlignment="Center" FontSize="25"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <RadioButton GroupName="Themes" IsChecked="True" >
+                        <RadioButton.Template>
+                            <ControlTemplate TargetType="RadioButton">
+                                <Rectangle Width="50" Height="50" Fill="White"  Stroke="Gray" StrokeThickness="3" Margin="5 5 5 5"/>
+                            </ControlTemplate>
+                        </RadioButton.Template>
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton">
+                                <Style.Triggers>
+                                    <Trigger Property="IsChecked" Value="False">
+                                        <Setter Property="Opacity" Value="0.5"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                    <RadioButton GroupName="Themes" >
+                        <RadioButton.Template>
+                            <ControlTemplate TargetType="RadioButton">
+                                <Rectangle Width="50" Height="50" Fill="Black"  Stroke="Gray" StrokeThickness="3" Margin="5 5 5 5"/>
+                            </ControlTemplate>
+                        </RadioButton.Template>
+                        <RadioButton.Style>
+                            <Style TargetType="RadioButton">
+                                <Style.Triggers>
+                                    <Trigger Property="IsChecked" Value="False">
+                                        <Setter Property="Opacity" Value="0.5"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </RadioButton.Style>
+                    </RadioButton>
+                </StackPanel>
+            </StackPanel>
             <Button x:Name="homeButton" Click="homeButton_Click" Background="DarkGray" Width="25" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5">
                 <Image Stretch="Fill" Source="/data/static/img/menu/home_icon.png"/>
                 <Button.Resources>
